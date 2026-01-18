@@ -1,0 +1,41 @@
+{
+  "name": "mermaid-powerpoint-plugin",
+  "version": "1.0.0",
+  "description": "PowerPoint plugin for creating diagrams using Mermaid.js syntax",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development --open",
+    "validate": "office-addin-manifest validate manifest.xml"
+  },
+  "keywords": ["office-add-in", "powerpoint", "mermaid", "diagrams"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fluentui/react-components": "^9.40.0",
+    "mermaid": "^10.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/office-js": "^1.0.360",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.4",
+    "office-addin-debugging": "^5.0.12",
+    "office-addin-dev-certs": "^1.11.3",
+    "office-addin-lint": "^2.2.6",
+    "office-addin-manifest": "^1.12.3",
+    "source-map-loader": "^4.0.1",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
