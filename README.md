@@ -1,6 +1,7 @@
 # Mermaid Diagram Plugin for PowerPoint
 
-A PowerPoint add-in that allows you to create beautiful diagrams using Mermaid.js syntax directly in your presentations.
+A **PowerPoint** add-in that allows you to create beautiful diagrams using Mermaid.js syntax directly in your presentations.
+That plugin has been designed by IBM Bob.
 
 ![Mermaid4Powerpoint App Display](picture/mermaid4Powerpoint.png)
 
