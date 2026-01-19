@@ -13,6 +13,8 @@ That plugin has been designed by IBM Bob.
 - **SVG Export**: Diagrams are inserted as high-quality SVG images
 - **Easy to Use**: Simple interface with pre-loaded examples
 
+For complete Mermaid syntax documentation, visit: https://mermaid.js.org/
+
 ## Supported Diagram Types
 
 ### Flowcharts
@@ -159,62 +161,6 @@ mermaid-powerpoint-plugin/
 - **Mermaid.js**: Diagram rendering engine
 - **Office.js**: PowerPoint integration API
 - **Webpack**: Module bundler
-
-## Mermaid Syntax Reference
-
-### Flowchart Basics
-```mermaid
-flowchart LR
-    A[Square] --> B(Rounded)
-    B --> C{Decision}
-    C -->|Yes| D[Result 1]
-    C -->|No| E[Result 2]
-```
-
-### Sequence Diagram Basics
-```mermaid
-sequenceDiagram
-    Alice->>John: Hello!
-    John-->>Alice: Hi!
-    Note right of John: Thinking...
-```
-
-### Class Diagram Basics
-```mermaid
-classDiagram
-    class Animal {
-        +String name
-        +int age
-        +makeSound()
-    }
-```
-
-### Quadrant Chart Basics
-```mermaid
-quadrantChart
-    title Product Analysis
-    x-axis Low Cost --> High Cost
-    y-axis Low Quality --> High Quality
-    quadrant-1 Premium
-    quadrant-2 Overpriced
-    quadrant-3 Budget
-    quadrant-4 Value
-    Product A: [0.3, 0.6]
-    Product B: [0.7, 0.8]
-```
-
-### Architecture Diagram Basics (C4)
-```mermaid
-C4Context
-    title System Context
-    Person(user, "User", "A user of the system")
-    System(system, "System", "The main system")
-    System_Ext(external, "External System", "External dependency")
-    Rel(user, system, "Uses")
-    Rel(system, external, "Calls")
-```
-
-For complete Mermaid syntax documentation, visit: https://mermaid.js.org/
 
 ## Troubleshooting
 
