@@ -3,11 +3,11 @@
 A **PowerPoint** add-in that allows you to create beautiful diagrams using Mermaid.js syntax directly in your presentations.
 That plugin has been designed by IBM Bob.
 
-![Mermaid4Powerpoint App Display](picture/mermaid4Powerpoint.png)
+![Mermaid4Powerpoint App Display](picture/New_flowchart.png)
 
 ## Features
 
-- **Multiple Diagram Types**: Support for flowcharts, sequence diagrams, and class diagrams
+- **Multiple Diagram Types**: Support for flowcharts, sequence diagrams, class diagrams, quadrant charts, and architecture diagrams (C4)
 - **Live Preview**: See your diagram render in real-time as you type
 - **Mermaid.js Syntax**: Use the popular Mermaid.js markdown-inspired syntax
 - **SVG Export**: Diagrams are inserted as high-quality SVG images
@@ -49,6 +49,36 @@ classDiagram
     Animal : +String gender
 ```
 
+### Quadrant Charts
+Visualize data across two dimensions with four quadrants.
+
+```mermaid
+quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+```
+
+### Architecture Diagrams (C4)
+Create system context and architecture diagrams using C4 model notation.
+
+```mermaid
+C4Context
+    title System Context diagram for Internet Banking System
+    Person(customerA, "Banking Customer", "A customer of the bank")
+    System(SystemAA, "Internet Banking System", "Allows customers to view information")
+    System_Ext(SystemE, "Mainframe Banking System", "Stores core banking information")
+    BiRel(customerA, SystemAA, "Uses")
+    Rel(SystemAA, SystemE, "Uses")
+```
+
 ## Installation
 
 ### Prerequisites
@@ -88,7 +118,7 @@ npm start
 ## Usage
 
 1. **Open the Plugin**: Click on the "Create Diagram" button in the Home tab
-2. **Select Diagram Type**: Choose from Flowchart, Sequence, or Class diagram
+2. **Select Diagram Type**: Choose from Flowchart, Sequence, Class, Quadrant Chart, or Architecture (C4) diagram
 3. **Edit Code**: Modify the Mermaid syntax in the text editor
 4. **Preview**: The diagram updates automatically in the preview pane
 5. **Insert**: Click "Insert into Slide" to add the diagram to your current slide
@@ -157,6 +187,31 @@ classDiagram
         +int age
         +makeSound()
     }
+```
+
+### Quadrant Chart Basics
+```mermaid
+quadrantChart
+    title Product Analysis
+    x-axis Low Cost --> High Cost
+    y-axis Low Quality --> High Quality
+    quadrant-1 Premium
+    quadrant-2 Overpriced
+    quadrant-3 Budget
+    quadrant-4 Value
+    Product A: [0.3, 0.6]
+    Product B: [0.7, 0.8]
+```
+
+### Architecture Diagram Basics (C4)
+```mermaid
+C4Context
+    title System Context
+    Person(user, "User", "A user of the system")
+    System(system, "System", "The main system")
+    System_Ext(external, "External System", "External dependency")
+    Rel(user, system, "Uses")
+    Rel(system, external, "Calls")
 ```
 
 For complete Mermaid syntax documentation, visit: https://mermaid.js.org/
